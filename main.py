@@ -25,4 +25,5 @@ def start_message(message):
             bot.send_message(message.chat.id, 'ТЫ не отгадал. Если хочешь продолжить тыкай на ИГРАТЬ')
 
 
+
 bot.polling(bot.polling(none_stop=True))
