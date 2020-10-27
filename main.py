@@ -24,6 +24,8 @@ def start_message(message):
         elif message.text != i:
             bot.send_message(message.chat.id, 'ТЫ не отгадал. Если хочешь продолжить тыкай на ИГРАТЬ')
 
-
+#git add
+#git commit -m ""
+#git push -u origin
 
 bot.polling(bot.polling(none_stop=True))
