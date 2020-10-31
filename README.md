@@ -1,2 +1,1 @@
 # my-simple-bot
-lol
