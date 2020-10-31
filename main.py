@@ -8,7 +8,7 @@ keyboard1.row('/Числа')
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'Привет, чтобы начать выбери игру', reply_markup=keyboard1)
+    bot.send_message(message.chat.id, 'Привет', reply_markup=keyboard1)
 
 
 @bot.message_handler(commands=['Числа'])
