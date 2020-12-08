@@ -3,26 +3,25 @@ import config
 from random import *
 bot = telebot.TeleBot(config.TOKEN)
 keyboard1 = telebot.types.ReplyKeyboardMarkup()
-keyboard1.row('/Играть', '1', '2', '3', '4', '5')
+keyboard1.row('/Киньмонетку')
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
     bot.send_message(message.chat.id, 'Привет', reply_markup=keyboard1)
 
-@bot.message_handler(commands=['Играть'])
+
+@bot.message_handler(commands=['Киньмонетку'])
 def start_message(message):
-    global i
-    bot.send_message(message.chat.id, 'Я загадал число от 1 до 5, напиши его в чат)😘')
-    i = str(randint(1, 5))
+    i = randint(1, 2)
     print(i)
+    if i == 1:
+        bot.send_message(message.chat.id, 'Так...\n Решка')
+    else:
+        bot.send_message(message.chat.id, 'Так...\n Орел')
 
-    @bot.message_handler(content_types=['text'])
-    def send_text(message):
-        if message.text == i:
-            bot.send_message(message.chat.id, 'Оgо ты отгадал. Если хочешь продолжить тыкай на ИГРАТЬ😄')
 
-        elif message.text != i:
-            bot.send_message(message.chat.id, 'ТЫ не отгадал. Если хочешь продолжить тыкай на ИГРАТЬ😅')
+
+
 
 
 #git add
